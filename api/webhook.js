@@ -4,14 +4,6 @@ const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET;
 const TELEGRAM_API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}`;
 
-// 🔒 DOMINIOS PERMITIDOS (ACTUALIZADO con tu dominio)
-const ALLOWED_ORIGINS = [
-    'https://www.libtradiocol.online',  // ✅ Tu dominio principal
-    'https://libtradiocol.online',       // ✅ Sin www
-    'http://localhost:3000',             // Para desarrollo
-    'https://libtradiocol.vercel.app'    // Si usas Vercel directamente
-];
-
 // 📊 Rate limiting
 const rateLimit = new Map();
 
@@ -38,33 +30,18 @@ function checkRateLimit(ip) {
 
 export default async function handler(req, res) {
     // ============================================
-    // 1. CONFIGURAR CORS
+    // 1. CONFIGURAR CORS (permitir todos los orígenes)
     // ============================================
-    const origin = req.headers.origin;
-    
-    if (ALLOWED_ORIGINS.includes(origin)) {
-        res.setHeader('Access-Control-Allow-Origin', origin);
-        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-        res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-    }
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, x-api-key');
 
     if (req.method === 'OPTIONS') {
         return res.status(200).end();
     }
 
     // ============================================
-    // 2. VERIFICAR ORIGEN (SOLO dominios permitidos)
-    // ============================================
-    if (!ALLOWED_ORIGINS.includes(origin)) {
-        console.log('🚫 Origen bloqueado:', origin);
-        return res.status(401).json({ 
-            error: 'Origen no autorizado',
-            allowed: ALLOWED_ORIGINS
-        });
-    }
-
-    // ============================================
-    // 3. RATE LIMITING
+    // 2. RATE LIMITING (evita ataques de fuerza bruta)
     // ============================================
     const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress || 'unknown';
     if (!checkRateLimit(ip)) {
@@ -75,7 +52,7 @@ export default async function handler(req, res) {
     }
 
     // ============================================
-    // 4. GET - Configurar webhook
+    // 3. GET - Configurar webhook (SIN verificar origen)
     // ============================================
     if (req.method === 'GET' && req.query.setup === 'true') {
         try {
@@ -111,11 +88,10 @@ export default async function handler(req, res) {
     }
 
     // ============================================
-    // 5. GET - Verificar estado
+    // 4. GET - Verificar estado
     // ============================================
     if (req.method === 'GET' && req.query.check) {
         const solicitudId = req.query.check;
-        // Aquí iría tu lógica para verificar estado
         return res.status(200).json({ 
             solicitudId: solicitudId,
             estado: 'pending'
@@ -123,12 +99,12 @@ export default async function handler(req, res) {
     }
 
     // ============================================
-    // 6. POST - Procesar mensajes
+    // 5. POST - Procesar mensajes
     // ============================================
     if (req.method === 'POST') {
         try {
             const body = req.body;
-            console.log('📨 POST recibido de:', origin, 'IP:', ip);
+            console.log('📨 POST recibido de IP:', ip);
 
             // CASO 1: Mensaje simple (sin solicitudId)
             if (body.mensaje && !body.solicitudId) {
@@ -196,7 +172,6 @@ export default async function handler(req, res) {
                 
                 console.log('🔘 Callback recibido:', callbackData);
                 
-                // Responder al callback
                 await fetch(`${TELEGRAM_API}/answerCallbackQuery`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -206,7 +181,6 @@ export default async function handler(req, res) {
                     })
                 });
                 
-                // Actualizar el mensaje
                 await fetch(`${TELEGRAM_API}/editMessageText`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
